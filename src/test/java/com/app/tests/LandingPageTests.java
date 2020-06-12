@@ -3,7 +3,7 @@ package com.app.tests;
 import org.testng.annotations.Test;
 
 import com.app.pages.LandingPage;
-import com.app.utility.BaseConfiguration;
+import com.app.utils.BaseConfiguration;
 
 
 
@@ -17,7 +17,7 @@ public class LandingPageTests extends BaseConfiguration {
 		landingPage.clickOnContinueBTN();
 		landingPage.selectPaymentViaCreditCardOption();
 		landingPage.enterCreditCardNumber("4811 1111 1111 1114");
-		landingPage.enterCreditCardExpDate("0520");
+		landingPage.enterCreditCardExpDate("0920");
 		landingPage.enterCreditCardCvvNumber("123");
 		landingPage.selectDeselectPromoCheckbox(false);
 		landingPage.clickOnPaynowBTN();
@@ -35,7 +35,7 @@ public class LandingPageTests extends BaseConfiguration {
 		landingPage.clickOnContinueBTN();
 		landingPage.selectPaymentViaCreditCardOption();
 		landingPage.enterCreditCardNumber("4911 1111 1111 1113");
-		landingPage.enterCreditCardExpDate("0520");
+		landingPage.enterCreditCardExpDate("0920");
 		landingPage.enterCreditCardCvvNumber("123");
 		landingPage.selectDeselectPromoCheckbox(true);
 		landingPage.clickOnPaynowBTN();
@@ -44,5 +44,6 @@ public class LandingPageTests extends BaseConfiguration {
 		landingPage.verifyFailedTransaction("Transaction failed");
 
 	}
+
 
 }

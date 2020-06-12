@@ -7,10 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.app.locators.LandingPageLoc;
-import com.app.utility.BaseConfiguration;
+import com.app.utils.BaseConfiguration;
 
 
-public class LandingPage extends BaseConfiguration implements LandingPageLoc{
+public class LandingPage extends BaseConfiguration implements LandingPageLoc
+{
 	public WebDriver driver;
 	public void moveToSignInLabel() {
 		waitforPresent(SIGN_IN_LABLE);
@@ -23,6 +24,7 @@ public class LandingPage extends BaseConfiguration implements LandingPageLoc{
 		clickOnElement(START_HERE_LABEL);
 	}
 	
+	// https://demo.midtrans.com/
 	public void clickOnBuyNowBTN() {
 		waitforPresent(LANDING_PAGE_BUY_BTN);
 		clickOnElement(LANDING_PAGE_BUY_BTN);
@@ -33,12 +35,11 @@ public class LandingPage extends BaseConfiguration implements LandingPageLoc{
 		clickOnElement(LANDING_PAGE_CHECKOUT_BTN);
 	}
 	public void clickOnContinueBTN() {
+
 		/*
 		 * if (isDisplayed(LANDING_PAGE_ORDER_SUMMARY_CONTINUE_BTN, 15)) {
 		 * clickOnElement(LANDING_PAGE_ORDER_SUMMARY_CONTINUE_BTN); }
 		 */
-
-		// WebElement frame = getDriver().findElement(By.cssSelector("#application"));
 		getDriver().switchTo().frame(0);
 		waitforPresent(LANDING_PAGE_ORDER_SUMMARY_CONTINUE_BTN);
 		// waitForVisible(LANDING_PAGE_ORDER_SUMMARY_CONTINUE_BTN, 20);
@@ -75,21 +76,21 @@ public class LandingPage extends BaseConfiguration implements LandingPageLoc{
 		if (isDisplayed(LANDING_PAGE_CREDIT_CARD_NUMBER, 20)) {
 			sendValue(LANDING_PAGE_CREDIT_CARD_NUMBER, cardNumber);
 		} else
-			System.out.println("element" + getDescription(LANDING_PAGE_CREDIT_CARD_NUMBER));
+			System.out.println("element not found" + getDescription(LANDING_PAGE_CREDIT_CARD_NUMBER));
 	}
 
 	public void enterCreditCardExpDate(String expiryDate) {
 		if (isDisplayed(LANDING_PAGE_CREDIT_CARD_EXPIRY_DATE, 20)) {
 			sendValue(LANDING_PAGE_CREDIT_CARD_EXPIRY_DATE, expiryDate);
 		} else
-			System.out.println("element" + getDescription(LANDING_PAGE_CREDIT_CARD_EXPIRY_DATE));
+			System.out.println("element not found" + getDescription(LANDING_PAGE_CREDIT_CARD_EXPIRY_DATE));
 	}
 
 	public void enterCreditCardCvvNumber(String cvvNumber) {
 		if (isDisplayed(LANDING_PAGE_CREDIT_CARD_CVV_NUMBER, 20)) {
 			sendValue(LANDING_PAGE_CREDIT_CARD_CVV_NUMBER, cvvNumber);
 		} else
-			System.out.println("element" + getDescription(LANDING_PAGE_CREDIT_CARD_CVV_NUMBER));
+			System.out.println("element not found" + getDescription(LANDING_PAGE_CREDIT_CARD_CVV_NUMBER));
 	}
 
 	public void selectDeselectPromoCheckbox(boolean checkedUnchecked) {

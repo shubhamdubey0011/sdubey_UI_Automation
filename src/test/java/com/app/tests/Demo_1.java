@@ -1,7 +1,8 @@
 package com.app.tests;
 
 import org.testng.annotations.Test;
-import com.app.utility.*;
+
+import com.app.utils.BaseConfiguration;
 
 
 public class Demo_1 extends BaseConfiguration {

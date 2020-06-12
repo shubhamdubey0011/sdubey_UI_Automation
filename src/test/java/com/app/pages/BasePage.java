@@ -6,8 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import com.app.utility.Driver;
-import com.app.utility.LocatorUtil;
+import com.app.utils.Driver;
+import com.app.utils.LocatorUtil;
+
 
 public class BasePage extends Driver {
 	final static int WAIT_TIME = 60;
