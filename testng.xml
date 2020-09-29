@@ -5,9 +5,6 @@
 		<listener class-name="com.app.utils.Listners" />
 	</listeners>
   <test thread-count="5" name="Test">
-  
-  
-  
     <classes>
       <class name="com.app.tests.LandingPageTests"/>
     </classes>

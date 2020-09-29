@@ -19,7 +19,7 @@ public class BaseConfiguration extends Driver{
 
 	//private static final String baseURL = "https://www.amazon.in";
 	//private static final String baseURL = "http://newtours.demoaut.com/";
-	private static final String baseURL = "https://demo.midtrans.com";
+	private static final String baseURL = "http://lazsa-dev.altimetrik.com/login";
 	final static int WAIT_TIME = 60;
 	final static int ALERT_WAIT_TIME = 10;
 	

@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.app.pages.LandingPage;
 import com.app.utils.BaseConfiguration;
+import com.app.utils.Driver;
 
 
 
@@ -12,6 +13,7 @@ public class LandingPageTests extends BaseConfiguration {
 	@Test(description = "verify User is  able to perform a successful transaction", enabled = true, priority = 1)
 	public void testSuccessfulTransaction() {
 		LandingPage landingPage = new LandingPage();
+		//Driver.getBrowserInfo();
 		landingPage.clickOnBuyNowBTN();
 		landingPage.clickOnCheckoutBTN();
 		landingPage.clickOnContinueBTN();
@@ -19,7 +21,7 @@ public class LandingPageTests extends BaseConfiguration {
 		landingPage.enterCreditCardNumber("4811 1111 1111 1114");
 		landingPage.enterCreditCardExpDate("0920");
 		landingPage.enterCreditCardCvvNumber("123");
-		landingPage.selectDeselectPromoCheckbox(false);
+		// landingPage.selectDeselectPromoCheckbox(false);
 		landingPage.clickOnPaynowBTN();
 		landingPage.enterOTP("112233");
 		landingPage.clickOnOKButton();
@@ -37,7 +39,7 @@ public class LandingPageTests extends BaseConfiguration {
 		landingPage.enterCreditCardNumber("4911 1111 1111 1113");
 		landingPage.enterCreditCardExpDate("0920");
 		landingPage.enterCreditCardCvvNumber("123");
-		landingPage.selectDeselectPromoCheckbox(true);
+		// landingPage.selectDeselectPromoCheckbox(true);
 		landingPage.clickOnPaynowBTN();
 		landingPage.enterOTP("112233");
 		landingPage.clickOnOKButton();

@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
-  <listeners>
-    <listener class-name="com.app.utility.Listners"/>
-  </listeners>
-  <test name="Test(failed)" parallel="none">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.app.tests.LandingPageTests">
+      <class name="com.app.tests.Demo_1">
         <methods>
-          <include name="openApplicationUnderTest"/>
           <include name="getDriver"/>
-          <include name="readConfig"/>
-          <include name="testFailedTransaction"/>
-          <include name="destroyDriver"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- com.app.tests.LandingPageTests -->
+      </class> <!-- com.app.tests.Demo_1 -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.app.tests.LandingPageTests">
+      <class name="com.app.tests.Demo_1">
         <methods>
-          <include name="openApplicationUnderTest"/>
           <include name="getDriver"/>
-          <include name="readConfig"/>
-          <include name="destroyDriver"/>
-          <include name="testUserIsSignedUp"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- com.app.tests.LandingPageTests -->
+      </class> <!-- com.app.tests.Demo_1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

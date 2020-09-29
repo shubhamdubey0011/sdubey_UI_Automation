@@ -46,8 +46,8 @@ public class LocatorUtil {
 		}
 	}
 	
-	/*
-	 * public static void main(String[] args) {
-	 * System.out.println(LocatorUtil.getBy("css=.btn.buy")); }
-	 */
+	public static void main(String[] args) {
+		System.out.println(LocatorUtil.getBy("css=.btn.buy"));
+	}
+
 }

@@ -10,6 +10,58 @@
 
 	<name>DesktopAutomation</name>
 	<url>http://maven.apache.org</url>
+	
+	 <profiles>
+  <profile>
+  <id>Regression</id>
+  
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+           <configuration>
+           <testFailureIgnore>true</testFailureIgnore>
+           <forkCount>3</forkCount>
+    <reuseForks>true</reuseForks>
+    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng2.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  </profile>
+  <profile>
+   <id>Smoke</id>
+  
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+           <configuration>
+           <testFailureIgnore>true</testFailureIgnore>
+           <forkCount>3</forkCount>
+    <reuseForks>true</reuseForks>
+    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  
+  </profile>
+  </profiles>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -113,6 +165,11 @@
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>6.1.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->

@@ -23,6 +23,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M4</version>
            <configuration>
+           <testFailureIgnore>true</testFailureIgnore>
            <forkCount>3</forkCount>
     <reuseForks>true</reuseForks>
     <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
@@ -46,6 +47,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M4</version>
            <configuration>
+           <testFailureIgnore>true</testFailureIgnore>
            <forkCount>3</forkCount>
     <reuseForks>true</reuseForks>
     <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
@@ -163,6 +165,11 @@
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>6.1.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
